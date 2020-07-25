@@ -1,9 +1,29 @@
 /* Problem-1: Feet to Mile converter
 -------------------------------------------------------------------------------------------------------------*/
 function feetToMile(feet){
-    var mile = feet/5280;
+    
+
+    //Condition for Positive input-------------------------------------------------
+    if(feet > 0){
+        var mile = feet/5280;
+    }
+    //Condition for Zero input-------------------------------------------------
+    else if(feet == 0){
+        return "You have enterder 0 !!!!";
+    }
+    //Condition for Negative input-------------------------------------------------
+    else if(feet < 0){
+        return "Length value can not be Negative !!!"
+    }
+    //Condition for other input-------------------------------------------------
+    else{
+        return "Invalid Format";
+    }
+
     return mile;
 }
+
+
 
 
 
@@ -14,18 +34,30 @@ function woodCalculator(chair,table,bed){
     const woodPerChair = 1;
     const woodPerTable = 3;
     const woodPerBed = 5;
-
-//Total Wood needed for per Furnichure----------------------------------------------
+    //Condition for Positive input-------------------------------------------------
+    if(chair,table,bed > 0){
+    //Total Wood needed for per Furnichure----------------------------------------------
     var woodForChair = woodPerChair*chair;
     var woodForTable = woodPerTable*table;
     var woodForBed = woodPerBed*bed;
 
-//Total Wood needed for All Furnichure----------------------------------------------
+    //Total Wood needed for All Furnichure----------------------------------------------
     var totalWood = woodForChair+woodForTable+woodForBed;
-
+    }
+    //Condition for Zero input-------------------------------------------------
+    else if(chair,table,bed == 0){
+        return "You have enterder 0 !!!!";
+    }
+    //Condition for Negative input-------------------------------------------------
+    else if(chair,table,bed < 0){
+        return "Length value can not be Negative !!!"
+    }
+    //Condition for other input-------------------------------------------------
+    else{
+        return "Invalid Format";
+    }
     return totalWood;
 }
-
 
 
 
@@ -63,13 +95,15 @@ function brickCalculator(floor){
     }
     
     //Condition for Negative, Zero and other input-------------------------------------------------
+    else if(floor < 0){
+        return "Floor value can not be negative !!"
+    }
     else{
         return "Invalid input";
     }
 
     return totalBricks;
 }
-
 
 
 
